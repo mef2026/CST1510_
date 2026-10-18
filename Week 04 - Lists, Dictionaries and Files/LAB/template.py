@@ -24,10 +24,9 @@ def check_record(value, limit):
     else:
         status = "OK"
     return difference, percent, status
- 
+
  
 def print_report(label, value, limit, difference, percent, status):
-    """Print a complete report for one record."""
     print(f"\nDataset: {label}")
     print(f"  Rows loaded:   {value:>9.2f}")
     print(f"  Rows expected: {limit:>9.2f}")
@@ -37,7 +36,6 @@ def print_report(label, value, limit, difference, percent, status):
  
  
 def load_records(path):
-    """Load label,value,limit records without assigning statuses."""
     records = []
     with open(path, encoding="utf-8") as file:
         for line in file:

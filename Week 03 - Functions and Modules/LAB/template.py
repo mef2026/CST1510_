@@ -14,7 +14,6 @@ Delete these instructions as you replace them with your code.
 
 
 def status_of(percent):
-    """Return the status for a percentage."""
     if percent >= 100:
         return "OVER LIMIT"
     elif percent >= 90:
@@ -24,14 +23,12 @@ def status_of(percent):
 
 
 def check(value, limit):
-    """Return the difference and percentage for a value and limit."""
     difference = value - limit
     percent = (value / limit) * 100
     return difference, percent
 
 
 def print_report(label, value, limit, difference, percent, status):
-    """Print one formatted record-check report."""
     print()
     print("=" * 34)
     print(f"  RECORD CHECK - {label}")
